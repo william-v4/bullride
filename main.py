@@ -59,6 +59,6 @@ while True:
         Process(target=servospin()).start()
         Process.start(target=rotorspin()).start()
     else:
-        if gpio.input(16) == 1
+        if gpio.input(16) == 1:
             stop = 0
             sleep(2)
