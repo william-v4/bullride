@@ -17,6 +17,7 @@ gpio.output(13, gpio.LOW)
 stop = 0
 gpio.setup(16, gpio.IN)
 
+
 def start():
     global playfinished
     global started
@@ -26,8 +27,10 @@ def start():
         playfinished = 1
     started = 1
 
+
 def rotorspin():
     gpio.out(13, gpio.HIGH)
+
 
 def servospin():
     servo.ChangeDutyCycle(6.25)
@@ -35,10 +38,12 @@ def servospin():
     servo.ChangeDutyCycle(8.75)
     servo.ChangeDutyCycle(7.5)
 
+
 def stop():
     global stop
     if gpio.input(16) == 1:
         stop = 1
+
 
 def ambient():
     global playfinished
