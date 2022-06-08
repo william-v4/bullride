@@ -2,6 +2,7 @@
 Servo servo;
 int stop = 0;
 void setup() {
+  pinMode(2, OUTPUT);
   servo.attach(3);
   servo.write(90);
   digitalWrite(7, HIGH);
@@ -17,9 +18,12 @@ void loop() {
       digitalWrite(2, LOW);
     }
     servo.write(70);
-    delay(512);
+    delay(256);
+    servo.write(90);
+    delay(256);
     servo.write(110);
-    delay(512);
+    delay(256);
+    servo.write(90);
   } else {
     delay(1024);
     if (digitalRead(4) == HIGH) {
